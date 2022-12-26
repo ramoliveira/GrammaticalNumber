@@ -98,6 +98,42 @@ public enum GrammaticalNumberRule {
             .uncountable("sheep"),
             .uncountable("jeans"),
             .uncountable("police")
+        ],
+        "pt-br": [
+            .irregular("chapéu", "chapéus"),
+            .irregular("álcool", "álcoois"),
+            .irregular("anel", "anéis"),
+            .irregular("cônsul", "cônsules"),
+            .irregular("têxtil", "têxteis"),
+            .irregular("sol", "sóis"),
+            .irregular("rouxinol", "rouxinóis"),
+            .irregular("mel", "méis"),
+            .irregular("raiz", "raízes"),
+            
+            .plural(#"(le|avi)ão"#, #"$1ões"#),
+            .plural(#"(c|p|capit|alem)ão"#, #"$1ães"#),
+            .plural(#"(m|irm|cidad|gr)ão"#, #"$1ãos"#),
+            .plural(#"([A-zÀ-ú]+)(n|r|s|z)$"#, #"$1es"#),
+            .plural(#"([A-zÀ-ú]+)m$"#, #"$1ns"#),
+            .plural(#"([A-zÀ-ú]+)l$"#, #"$1is"#),
+            .plural(#"([A-zÀ-ú]+)[aeiou]$"#, #"$1s"#),
+            
+            .singular(#"(le|avi)ões"#, #"$1ão"#), 
+            .singular(#"(m|irm)ãos"#, #"$1ão"#),
+            .singular(#"(c|p)ães"#, #"$1ão"#),
+            .singular(#"([A-z]+)es"#, #"$1"#),
+            .singular(#"([A-zÀ-ú]+)ns"#, #"$1m"#),
+            .singular(#"(far)óis"#, #"$1ol"#),
+            .singular(#"(pap)éis"#, #"$1el"#),
+            .singular(#"([A-z]+)is"#, #"$1l"#),
+            
+            .uncountable("oásis"),
+            .uncountable("lápis"),
+            .uncountable("lápis"),  
+            .uncountable("vírus"),
+            .uncountable("costas"),
+            .uncountable("calças"),
+            .uncountable("parabéns"),
         ]
     ]
 }
